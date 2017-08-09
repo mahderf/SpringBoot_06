@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="www.thymeleaf.org">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Music App</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"/>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css"/>
+    <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css"/>
+
+    <!-- Theme CSS -->
+    <link href="css/new-age.min.css" rel="stylesheet"/>
+    <link href="css/newfile.css" rel="stylesheet"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="header-content">
+                    <div class="header-content-inner">
+                        <h1>Enter a song information here!</h1>
+                        <form action="#" th:action="@{/songform}" th:object="${song}" method="post">
+                            <p>Name:<input type="text"  th:field="*{name}" />
+                                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span></p>
+                            <p>Artist:<input type="text" th:field="*{artist}" />
+                                <span th:if="${#fields.hasErrors('artist')}" th:errors="*{artist}">Artist Error</span></p>
+                            <p>Album:<input type="text" th:field="*{album}" />
+                                <span th:if="${#fields.hasErrors('album')}" th:errors="*{album}">Album Error</span></p>
+                            <p>Rating:<input type="text" th:field="*{rating}" />
+                                <span th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}">Rating Error</span></p>
+                            <p>Year:<input type="text" th:field="*{year}" />
+                                <span th:if="${#fields.hasErrors('year')}" th:errors="*{year}">Year Error</span></p>
+                            <input type="submit" class="btn btn-outline btn-xl page-scroll" value="Submit" />
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="device-container">
+                    <div class="device-mockup iphone6_plus portrait white">
+                        <div class="device">
+                            <div class="screen">
+                                <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                <img src="img/demo-screen-1.jpg" class="img-responsive" alt="">
+                            </div>
+                            <div class="button">
+                                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="contact" class="contact bg-primary">
+    <div class="container">
+        <h2>We <i class="fa fa-heart"></i> new friends!</h2>
+        <ul class="list-inline list-social">
+            <li class="social-twitter">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="social-facebook">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="social-google-plus">
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2016 Start Bootstrap. All Rights Reserved.</p>
+        <ul class="list-inline">
+            <li>
+                <a href="#">Privacy</a>
+            </li>
+            <li>
+                <a href="#">Terms</a>
+            </li>
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="lib/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/new-age.min.js"></script>
+
+</body>
+
+</html>

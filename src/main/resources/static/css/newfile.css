@@ -1,0 +1,18 @@
+body
+{
+    color:green;
+}
+
+textarea{
+
+    color:gray;
+}
+
+.btn-xlbtn-xl
+{
+    color:red;
+    background-color: burlywood;
+    border-style:none;
+
+
+}
