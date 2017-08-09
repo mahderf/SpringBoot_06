@@ -52,16 +52,16 @@
                         <h1>Enter a song information here!</h1>
                         <form action="#" th:action="@{/songform}" th:object="${song}" method="post">
                             <p>Name:<input type="text"  th:field="*{name}" />
-                                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span></p>
+                                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-primary">Name Error</span></p>
                             <p>Artist:<input type="text" th:field="*{artist}" />
-                                <span th:if="${#fields.hasErrors('artist')}" th:errors="*{artist}">Artist Error</span></p>
+                                <span th:if="${#fields.hasErrors('artist')}" th:errors="*{artist}" class="text-primary">Artist Error</span></p>
                             <p>Album:<input type="text" th:field="*{album}" />
-                                <span th:if="${#fields.hasErrors('album')}" th:errors="*{album}">Album Error</span></p>
+                                <span th:if="${#fields.hasErrors('album')}" th:errors="*{album}" class="text-primary">Album Error</span></p>
                             <p>Rating:<input type="text" th:field="*{rating}" />
-                                <span th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}">Rating Error</span></p>
+                                <span th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}" class="text-primary">Rating Error</span></p>
                             <p>Year:<input type="text" th:field="*{year}" />
-                                <span th:if="${#fields.hasErrors('year')}" th:errors="*{year}">Year Error</span></p>
-                            <input type="submit" class="btn btn-outline btn-xl page-scroll" value="Submit" />
+                                <span th:if="${#fields.hasErrors('year')}" th:errors="*{year}" class="text-primary">Year Error</span></p>
+                            <input type="submit" class="btn btn-info btn-xl page-scroll" value="Submit" />
 
                         </form>
 
